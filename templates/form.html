@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>サブー書店 - フォーム</title>
+</head>
+<body>
+    <h1>サブー書店</h1>
+    <form action="{{ url_for('form') }}" method="post">
+        <table border="1">
+            <tr>
+                <th>入荷日</th>
+                <th>タイトル</th>
+                <th>金額</th>
+            </tr>
+            <tr>
+                <!-- <td><input type="text" name="date" placeholder="YYYY-MM-DD" required></td> -->
+                <td><input type="date" name="date" required></td>
+                <td><input type="text" name="title" required></td>
+                <td><input type="number" name="price" required></td>
+            </tr>
+        </table>
+        <button type="submit">登録</button>
+    </form>
+</body>
+</html>

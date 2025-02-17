@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>サブー書店</title>
+</head>
+<body>
+    <h1>サブー書店</h1>
+    <h2>今月の新刊一覧</h2>
+    <table border="1">
+        <tr>
+            <th>入荷日</th>
+            <th>タイトル</th>
+            <th>金額</th>
+        </tr>
+        {% for book in books %}
+        <tr>
+            <td>{{ book.date }}</td>
+            <td>{{ book.title }}</td>
+            <td>{{ book.price }}円</td>
+        </tr>
+        {% endfor %}
+    </table>
+    <a href="{{ url_for('form') }}">編集</a>
+</body>
+</html>
